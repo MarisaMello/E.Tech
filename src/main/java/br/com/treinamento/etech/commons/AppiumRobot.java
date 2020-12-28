@@ -16,4 +16,13 @@ public class AppiumRobot extends BaseTest{
         }
         return driver.findElement(By.xpath("//android.widget.TextView[@text='"+texto+"']")).isDisplayed();
     }
+    public boolean validaMensagem(String texto){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return driver.findElement(By.xpath("//android.view.View[@text='"+texto+"']")).isDisplayed();
+    }
+
 }
